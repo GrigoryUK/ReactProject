@@ -1,21 +1,18 @@
-import React from 'react';
-import {classNames} from "shared/lib/classNames/classNames";
-import cls from './Navbar.module.scss';
-import {AppLink, AppLinkTheme} from "shared/ui/AppLink/AppLink";
-import {ThemeSwitcher} from "widgets/ThemeSwitcher";
-import {LangSwitcher} from "widgets/LangSwitcher";
-import {useTranslation} from "react-i18next";
-
-
-
+import React from 'react'
+import { classNames } from 'shared/lib/classNames/classNames'
+import cls from './Navbar.module.scss'
+import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
+import { ThemeSwitcher } from 'widgets/ThemeSwitcher'
+import { LangSwitcher } from 'widgets/LangSwitcher'
+import { useTranslation } from 'react-i18next'
 
 interface NavbarProps {
-    className?: string;
+  className?: string
 }
 
-export const Navbar = ({className}: NavbarProps) => {
-    const {t} = useTranslation()
-    return (
+export const Navbar = ({ className }: NavbarProps) => {
+  const { t } = useTranslation()
+  return (
         <div className={classNames(cls.Navbar, {}, [className])}>
 
             <div className={cls.Navbar__links}>
@@ -27,8 +24,5 @@ export const Navbar = ({className}: NavbarProps) => {
                 <LangSwitcher />
             </div>
         </div>
-    );
-};
-
-
-
+  )
+}
