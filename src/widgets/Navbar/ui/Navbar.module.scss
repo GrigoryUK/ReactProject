@@ -1,0 +1,32 @@
+.Navbar {
+  max-width: 100%;
+  height: var(--navbar-height);
+  background: var(--bg-primary-block);
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  justify-content: space-between;
+
+  &__links {
+
+
+    a {
+
+      &:first-child {
+        margin-right: 16px;
+      }
+    }
+  }
+
+  &__switcher {
+    display: flex;
+    align-items: center;
+
+    button {
+      &:first-child {
+        margin-right: 16px;
+      }
+    }
+  }
+}
+

@@ -11,8 +11,9 @@ import {useTheme} from "app/providers/ThemeProvider";
 
 // Добовления классов
 import {classNames} from "shared/lib/classNames/classNames";
-
-
+import {AppRouter} from "app/providers/router";
+import {Navbar} from "widgets/Navbar";
+import {Sidebar} from "widgets/Sidebar";
 
 
 
@@ -23,15 +24,15 @@ const App = () => {
     const {theme, toggleTheme} = useTheme()
     return (
         <div className={classNames('app', {hovered: true, selected: true}, [theme])}>
-            <button onClick={toggleTheme}>Toggle theme</button>
-            <Link to={'/'}>Главная</Link>
-            <Link to={'/about'}>O сайте</Link>
-            <Suspense fallback={<div>Loading...</div>}>
-                <Routes>
-                    <Route path={'/about'} element={<AboutPage/>}/>
-                    <Route path={'/'} element={<MainPage/>}/>
-                </Routes>
+            <Suspense fallback=''>
+                <Navbar/>
+
+                <div className='content-page'>
+                    <Sidebar/>
+                    <AppRouter/>
+                </div>
             </Suspense>
+
         </div>
     );
 };

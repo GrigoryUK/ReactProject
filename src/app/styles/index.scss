@@ -8,5 +8,17 @@
   background: var(--bg-primary);
   color: var(--primary--text);
 
-  min-height: 100vh;
+
+  height: 100vh;
+  overflow: hidden;
 }
+
+.content-page {
+  display: flex;
+}
+
+.page-wrapper {
+  flex-grow: 1;
+  padding: 16px;
+}
+

@@ -1,0 +1,11 @@
+.Sidebar {
+  position: relative;
+  height: calc(100vh - var(--navbar-height) - 32px);
+  width: var(--sidebar-width);
+  background: var(--bg-primary-block);
+  transition: width 0.4s ease-in-out;
+}
+
+.collapsed {
+  width: var(--sidebar-width--collapsed);
+}
