@@ -1,7 +1,7 @@
 .Sidebar {
   position: relative;
-  height: calc(100vh - var(--navbar-height) - 32px);
   width: var(--sidebar-width);
+  height: calc(100vh - var(--navbar-height) - 32px);
   background: var(--bg-primary-block);
   transition: width 0.4s ease-in-out;
 }

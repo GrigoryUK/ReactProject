@@ -4,13 +4,11 @@
 @import "themes/dark";
 
 .app {
-  font: var(--font-m);
-  background: var(--bg-primary);
-  color: var(--primary--text);
-
-
-  height: 100vh;
   overflow: hidden;
+  height: 100vh;
+  font: var(--font-m);
+  color: var(--primary--text);
+  background: var(--bg-primary);
 }
 
 .content-page {
@@ -21,4 +19,3 @@
   flex-grow: 1;
   padding: 16px;
 }
-
