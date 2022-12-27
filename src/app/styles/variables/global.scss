@@ -6,9 +6,16 @@
   --font-size-l: 1.5em;
   --font-line-l: 1.2em;
   --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
+  --font-size-x: 3em;
+  --font-line-x: 1em;
 
   // размеры
   --navbar-height: 50px;
   --sidebar-width: 300px;
   --sidebar-width--collapsed: 80px;
+
+  // цвета
+  --primary1: #fff;
+  --primary2: #ccc;
+  --primary3: #156615;
 }

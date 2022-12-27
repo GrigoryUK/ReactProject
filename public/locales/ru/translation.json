@@ -3,5 +3,8 @@
   "languages" : "RU",
   "About us": "О нас",
   "Main": "Главная",
-  "Page not found": "Страница не найдена"
+  "Page not found": "Страница не найдена",
+  "Oops, something went wrong": "Упс, что-то пошло не так",
+  "Reload page": "Перезагрузить страницу",
+  "Throw an error": "Вызвать ошибку"
 }

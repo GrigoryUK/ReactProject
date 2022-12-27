@@ -3,5 +3,8 @@
   "languages" : "EN",
   "About us": "About us",
   "Main": "Main",
-  "Page not found": "Page not found"
+  "Page not found": "Page not found",
+  "Oops, something went wrong": "Oops, something went wrong",
+  "Reload page": "Reload page",
+  "Throw an error": "Throw an error"
 }
