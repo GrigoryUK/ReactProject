@@ -1,7 +1,7 @@
 import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
-import { Button, ThemeButton } from './Button'
+import { Button, ButtonSize, ButtonTheme } from './Button'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { Theme } from 'app/providers/ThemeProvider'
 
@@ -24,13 +24,13 @@ Primary.args = {
 export const Clear = Template.bind({})
 Clear.args = {
   children: 'Text',
-  theme: ThemeButton.CLEAR
+  theme: ButtonTheme.CLEAR
 }
 
 export const Outlined = Template.bind({})
 Outlined.args = {
   children: 'Text',
-  theme: ThemeButton.OUTLINE
+  theme: ButtonTheme.OUTLINE
 }
 
 Outlined.decorators = [ThemeDecorator(Theme.LIGHT)]
@@ -38,6 +38,40 @@ Outlined.decorators = [ThemeDecorator(Theme.LIGHT)]
 export const OutlinedDark = Template.bind({})
 OutlinedDark.args = {
   children: 'Text',
-  theme: ThemeButton.OUTLINE
+  theme: ButtonTheme.OUTLINE
 }
 OutlinedDark.decorators = [ThemeDecorator(Theme.DARK)]
+
+export const Collapse = Template.bind({})
+Collapse.args = {
+  children: '>',
+  theme: ButtonTheme.COLLAPSE
+}
+Collapse.decorators = [ThemeDecorator(Theme.LIGHT)]
+export const CollapseDark = Template.bind({})
+CollapseDark.args = {
+  children: '>',
+  theme: ButtonTheme.COLLAPSE
+}
+CollapseDark.decorators = [ThemeDecorator(Theme.DARK)]
+
+export const OutlinedSizeM = Template.bind({})
+OutlinedSizeM.args = {
+  children: 'Text',
+  theme: ButtonTheme.OUTLINE,
+  size: ButtonSize.M
+}
+
+export const OutlinedSizeL = Template.bind({})
+OutlinedSizeL.args = {
+  children: 'Text',
+  theme: ButtonTheme.OUTLINE,
+  size: ButtonSize.L
+}
+
+export const OutlinedSizeX = Template.bind({})
+OutlinedSizeX.args = {
+  children: 'Text',
+  theme: ButtonTheme.OUTLINE,
+  size: ButtonSize.X
+}
