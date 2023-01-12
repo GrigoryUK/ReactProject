@@ -14,7 +14,7 @@ module.exports = {
     sourceType: 'module',
     project: ["./tsconfig.json"]
   },
-  plugins: ['react', '@typescript-eslint', 'i18next'],
+  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
   rules: {
     'react/react-in-jsx-scope': 0,
     'react/jsx-uses-react': 0,
@@ -24,6 +24,8 @@ module.exports = {
     '@typescript-eslint/naming-convention': 0,
     '@typescript-eslint/no-floating-promises': 1,
     '@typescript-eslint/no-misused-promises': 1,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error",
     'no-unused-vars': 1,
     'i18next/no-literal-string': ['error', {
       markupOnly: true,
@@ -34,7 +36,7 @@ module.exports = {
     __IS_DEV__: "readonly"
   },
   overrides: [{
-    files: ['**/src/**/*.test.{ts,tsx}'],
+    files: ['**/src/**/*.{test, stories}.{ts,tsx}'],
     rules: {
       'i18next/no-literal-string': 'off'
     }
