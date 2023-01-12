@@ -13,7 +13,6 @@ interface NavbarProps {
 
 export const Navbar = ({ className }: NavbarProps) => {
   const { t } = useTranslation()
-  const [isOpen, setIsOpen] = useState(false)
   const [isAuthModal, setIsAuthModal] = useState(false)
   const onToggleModal = useCallback(() => {
     setIsAuthModal((prev) => !prev)
@@ -30,9 +29,9 @@ export const Navbar = ({ className }: NavbarProps) => {
                     {t('sign in')}
                 </Button>
                 <Modal isOpen={isAuthModal} onClose={onToggleModal}>
-                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consequuntur deserunt dicta
-                        dolorem ex facilis, illo molestias obcaecati quis, repellendus rerum sequi sunt temporibus
-                        tenetur veritatis voluptas voluptatibus. Porro, repudiandae!
+                    <div>{t('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consequuntur deserunt dicta\n' +
+                        'dolorem ex facilis, illo molestias obcaecati quis, repellendus rerum sequi sunt temporibus\n' +
+                        'tenetur veritatis voluptas voluptatibus. Porro, repudiandae!')}
                     </div>
                 </Modal>
                 <ThemeSwitcher />
